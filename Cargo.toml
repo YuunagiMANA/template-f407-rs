@@ -1,5 +1,5 @@
 [package]
-name = "serial_demo"
+name = "template-f407-rs"
 version = "0.1.0"
 authors = ["YuunagiMANA <1287227432@qq.com>"]
 edition = "2021"

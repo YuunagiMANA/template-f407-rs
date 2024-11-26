@@ -1,0 +1,27 @@
+[package]
+name = "serial_demo"
+version = "0.1.0"
+authors = ["YuunagiMANA <1287227432@qq.com>"]
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.5"
+embedded-hal = "1.0.0"
+panic-halt = "1.0.0"
+
+
+[dependencies.stm32f4xx-hal]
+version = "0.22.1"
+features = ["stm32f407", ]
+
+# Set the default for dependencies.
+[profile.dev.package."*"]
+opt-level = "s"
+
+[profile.release]
+codegen-units = 1
+incremental = false
+debug = true
+lto = true
+opt-level = "s"
